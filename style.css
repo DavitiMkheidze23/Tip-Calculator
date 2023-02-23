@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@media only screen and (min-width: 376px) 
+{
+body {
+    background-color: #C5E4E7;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 163px;
+}
+.Logo-img{
+    width: 87px;
+    margin-bottom: 88px;
+}
+.Calculator-div {
+    display: flex;
+    width: 830px;
+    height: 420px;
+    border-radius: 25px;
+    padding: 48px;
+    background-color: #fff;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+}
+.Left-div {
+    width: 380px;
+    height: 388px;
+}
+.Left-div-p {
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+}
+#Bill-input {
+    background-image: url('./icon-dollar.svg');
+    background-repeat: no-repeat;
+    width: 360px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #F3F9FA;
+    background-position: 12px;
+    border: 0;
+    padding: 17px;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #00474B;
+    margin-bottom: 40px;
+    cursor: pointer;
+    border: 1px solid #F3F9FA;
+}
+#Bill-input:hover {
+    border: 1px solid #26C2AE;
+    background-color: #F3F9FA;
+}
+.Percentage-button {
+    width: 117px;
+    height: 48px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #00474B;
+    cursor: pointer;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    color: #fff;
+    margin-top: 16px;
+}
+.Percentage-button:hover {
+    background-color: #9FE8DF;
+    color:#00474B;
+}
+.Percentage-main-div {
+    margin-bottom: 40px;
+}
+#Custom-input {
+    width: 111px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: #F3F9FA;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    color: #547878;
+    text-indent: 10px;
+    cursor: pointer;
+}
+#Number-input{
+    background-image: url('./icon-person.svg');
+    background-repeat: no-repeat;
+    width: 360px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #F3F9FA;
+    background-position: 12px;
+    border: 0;
+    padding: 17px;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #00474B;
+    margin-bottom: 40px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+.Right-div {
+    margin-left: 48px;
+    width: 413px;
+    height: 417px;
+    border-radius: 15px;
+    background-color: #00474B;
+}
+.Tip-amount-p{
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+.Person{
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: #7f9d9f;
+}
+.Money-p{
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: -1px;
+    color: #26c2ae;
+}
+.Tip-amount-div1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.Tip-amount-div2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 53px;
+}
+.Total-div {
+    margin-left: -16px;
+}
+.Money-p2{
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: -1px;
+    color: #26c2ae;
+    margin-right: -16px;
+}
+.Reset-button {
+    width: 333px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: #0D686D;
+    border: 0;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #00474B;
+    cursor: pointer;
+    margin-top: 115px;
+    margin-left: 40px;
+}
+.Reset-button:hover {
+    background-color: #9FE8DF;
+    color: #00474B;
+}
+
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {   -webkit-appearance: none; }
+
+input[type=number] 
+{   -moz-appearance: textfield; 
+    direction: rtl;
+} ;
+}

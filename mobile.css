@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@media only screen and (max-width: 376px)
+{
+body {
+    background-color: #C5E4E7;
+}
+.Logo-img {
+    margin-top: 40px;
+    margin-left: 145px;
+    margin-bottom: 40px;
+}
+.Calculator-div {
+    width: 311px;
+    padding: 32px;
+    height: 790px;
+    background-color: #fff;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    border-radius: 25px 25px 0px 0px;
+}
+.Left-div-p {
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+    margin-bottom: 6px;
+}
+#Bill-input {
+    background-image: url('./icon-dollar.svg');
+    background-repeat: no-repeat;
+    width: 311px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: #F3F9FA;
+    background-position: 12px;
+    border: 0;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #00474B;
+    cursor: pointer;
+    margin-bottom: 32px;
+}
+.Percentage-button {
+    width: 147px;
+    height: 48px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #00474B;
+    cursor: pointer;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    color: #fff;
+    margin-top: 16px;
+}
+#Custom-input {
+    width: 139px;
+    height: 43px;
+    border-radius: 5px;
+    background-color: #F3F9FA;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    color: #547878;
+    text-indent: 10px;
+    cursor: pointer;
+}
+#Number-input{
+    background-image: url('./icon-person.svg');
+    background-repeat: no-repeat;
+    width: 311px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: #F3F9FA;
+    background-position: 12px;
+    border: 0;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #00474B;
+    cursor: pointer;
+    direction: rtl;
+}
+.Right-div {
+    width: 327px;
+    height: 280px;
+    border-radius: 15px;
+    background-color: #00474B;
+    margin-top: 32px;
+}
+.Tip-amount-div1 {
+    display: flex;
+}
+.Tip-amount {
+    margin-left: 24px;
+    margin-top: 40px;
+}
+.Tip-amount-p{
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+.Person{
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: #7f9d9f;
+}
+.Percentage-main-div {
+    margin-bottom: 32px;
+}
+.Money-p{
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    letter-spacing: -1px;
+    color: #26c2ae;
+    margin-top: 32px;
+    margin-left: 87px;
+}
+.Tip-amount-div2 {
+    display: flex;
+}
+.Money-p2{
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    letter-spacing: -1px;
+    color: #26c2ae;
+    margin-top: 32px;
+    margin-left: 121px;
+}
+.Total-div {
+    margin-left: 24px;
+    margin-top: 40px;
+}
+.Reset-button {
+    width: 280px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: #0D686D;
+    border: 0;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #00474B;
+    cursor: pointer;
+    margin-top: 35px;
+    margin-left: 24px;
+}
+.Reset-button:hover {
+    background-color: #9FE8DF;
+    color: #00474B;
+}
+}

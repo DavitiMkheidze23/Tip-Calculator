@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+        <img class="Logo-img" src="logo.svg" >
+        <div class="Calculator-div">
+            <div class="Left-div">
+                <p class="Left-div-p">Bill</p>
+                <input type="number" placeholder="0" id="Bill-input" dir="rtl">
+                <p class="Left-div-p">Select Tip %</p>
+                <div class="Percentage-main-div">
+                    <button class="Percentage-button">
+                        5%
+                    </button>
+                    <button class="Percentage-button">
+                        10%
+                    </button>
+                    <button class="Percentage-button">
+                        15%
+                    </button>
+                    <button class="Percentage-button">
+                        25%
+                    </button>
+                    <button class="Percentage-button">
+                        50%
+                    </button>
+                    <input type="number" placeholder="Custom" id="Custom-input">
+                </div>
+                <p class="Left-div-p">
+                    Number of People
+                </p>
+                <input type="number" placeholder="0" id="Number-input">
+            </div>
+            <div class="Right-div">
+                <div class="Tip-amount-div1">
+                    <div class="Tip-amount">
+                        <p class="Tip-amount-p">
+                            Tip Amount
+                        </p>
+                        <p class="Person">
+                            / person
+                        </p>
+                    </div>
+                    <p class="Money-p">
+                        $0.00
+                    </p>
+                </div>
+                <div class="Tip-amount-div2">
+                    <div class="Total-div">
+                        <p class="Tip-amount-p">
+                            Total
+                        </p>
+                        <p class="Person">
+                            / person
+                        </p>
+                    </div>
+                    <p class="Money-p2">
+                        $0.00
+                    </p>
+                </div>
+                <button class="Reset-button">
+                    RESET
+                </button>
+            </div>
+        </div>
+        <script>
+            const billAmount = document.querySelector("#Bill-input");
+            const numberOfPeople = document.querySelector("#Number-input");
+            const customTipPercentage = document.querySelector("#Custom-input");
+            const billTipAmount = document.querySelector(".Money-p");
+            const billTotalPerPerson = document.querySelector(".Money-p2");
+            const resetButton = document.querySelector(".Reset-button");
+            const buttons = document.querySelectorAll(".Percentage-button");
+
+            buttons.forEach((button) => {
+                button.addEventListener("click", (e) => {
+                    let tipvalue = e.target.innerText;
+                    tipvalue = tipvalue.substr(0, tipvalue.length - 1);
+
+                    if (billAmount.value === "") return;
+                    if (numberOfPeople.value === "") numberOfPeople.value = 1;
+
+                    calculateTip(
+                        parseFloat(billAmount.value),
+                        parseInt(tipvalue),
+                        parseInt(numberOfPeople.value),
+                    )
+                })
+            })
+
+            customTipPercentage.addEventListener("blur", (e) => {
+                if (billAmount.value === "") {
+                    return;
+                }
+                if (numberOfPeople.value === "") numberOfPeople.value = 1;
+                calculateTip(
+                    parseFloat(billAmount.value),
+                    parseFloat(e.target.value),
+                    parseInt(numberOfPeople.value)
+                );
+            })
+
+            function calculateTip(billAmount, tipPercentage, numberOfPeople) {
+                let tipAmount = (billAmount * (tipPercentage / 100)) / numberOfPeople;
+                let tip = Math.floor(tipAmount * 100) / 100;
+                tip = tip.toFixed(2);
+
+                let totalAmount = (tipAmount * numberOfPeople + billAmount) / numberOfPeople;
+                totalAmount = totalAmount.toFixed(2);
+                
+                billTipAmount.innerHTML = `$${tip}`;
+                billTotalPerPerson.innerHTML = `$${totalAmount}`;
+
+            }
+
+            resetButton.addEventListener("click", (event) => {
+                billTipAmount.innerHTML = "$0.00";
+                billTotalPerPerson.innerHTML = "$0.00";
+                billAmount.value = "";
+                numberOfPeople.value = "";
+                customTipPercentage.value = "";
+            });
+        </script>
+</body>
+</html>
